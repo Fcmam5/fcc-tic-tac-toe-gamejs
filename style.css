@@ -1,0 +1,30 @@
+body {
+	background-color: #455A64;
+	color: #CFD8DC;
+}
+h1 {
+	color: #FFFFFF;
+}
+.playground-main-box {
+	background-color: #FFFFFF;
+	width: 30%;
+	height: 50vh;
+	margin: auto;
+	box-sizing: border-box;
+}
+.playground-main-box td {
+	box-sizing: border-box;
+	background-color: #212121;
+	margin: .3%;
+	text-align: center;
+	text-transform: uppercase;
+	width: 33%;
+	border: solid #CFD8DC 1px;
+}
+.playground-main-box td:hover {
+	background-color: darkorange;
+}
+.disabledCase{
+	pointer-events: none;
+	font-weight: bold;
+}
