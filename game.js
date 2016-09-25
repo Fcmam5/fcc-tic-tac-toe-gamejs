@@ -7,9 +7,7 @@ var winingCases = [
     [2, 5, 8],
     [3, 6, 9],
     [1, 5, 9],
-    [7, 5, 3],
-    [3, 5, 7],
-    [9, 5, 1]
+    [3, 5, 7]
 ];
 
 var uncheckedCases = [7, 8, 9, 4, 5, 6, 1, 2, 3];
@@ -17,19 +15,10 @@ var uncheckedCases = [7, 8, 9, 4, 5, 6, 1, 2, 3];
 // plyaingProcess
 var playGroundMgt = function (theCase) {
 	'use strict';
-	var myIndex = uncheckedCases.indexOf[theCase];
-	console.log("--- playground n" + theCase + "---")
-	console.log("- you : "+ theCase);
-	console.log("deleting: " + myIndex);
-	console.log("before: " + uncheckedCases);
-	
+	var myIndex = uncheckedCases.indexOf(theCase);
+	//Deleting element from "uncheckedCases" array
 	uncheckedCases.splice(myIndex, 1);
-	console.log("after: " + uncheckedCases);
-	
-	console.log("----");
-
-}
-
+};
 
 //You, the first player
 var youThePlayer = []; // moves
@@ -50,8 +39,13 @@ var iPlay = function (callback) {
 		var numbr = parseInt(event.target.id);
 		youPlay(numbr);
 		playGroundMgt(numbr);
-		console.log("You played: " + youThePlayer);
-		console.log("Availible cases " + uncheckedCases);
+		
+		// sort yur score nd compare
+		youThePlayer.sort();
+		//var subarray = youThePlayer.slice(0,3);
+		
+		//todo: search for the winning cases 
+		
 	}); // end playing event :)
 
 	callback();
